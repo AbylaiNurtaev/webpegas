@@ -1,0 +1,49 @@
+.container
+    width: 100%
+    height: 70px
+
+    border-radius: 20px
+    background: #F4F8FC
+
+    display: flex
+    flex-direction: row
+
+    justify-content: space-between
+    align-items: center
+
+    padding: 0 20px
+    margin-top: 20px
+
+    .logo
+        cursor: pointer
+
+
+    .feedbackBtn
+        width: 130px
+        height: 40px
+
+        background: #1760D7
+        border-radius: 8px
+
+        color: white
+        border: none
+
+        font-weight: 700
+
+    .phoneIcon 
+        display: none
+
+@media screen and ( max-width:  768px)
+    .container
+        .phoneIcon
+            display: flex
+
+        .feedbackBtn
+            display: none
+
+@media screen and ( max-width:  480px)
+    .container
+
+        .logo
+            width: 136px
+    
