@@ -21,20 +21,35 @@
         background-image: url('../../backgrounds/glass_1.png')
         background-repeat: no-repeat
         background-position: right center
+
+        display: flex
+        flex-direction: column
+
+        justify-content: flex-start
+        align-items: flex-start
         
         .title
-            font-family: $title-font
-            font-weight: bolder
+            width: 100%
+            
+            margin: 30px 0 0 30px
             font-size: 80px
             line-height: 87%
+            font-family: $title-font
+            font-weight: 500
             text-transform: uppercase
             color: #0b367d
+
+
 
         .par
             font-family: "Roboto", sans-serif
             font-weight: 300
             font-size: 32px
+
+            margin: 32px 0 0 30px
             line-height: 125%
+
+            width: 580px
             color: #0b367d
 
         .buttons
@@ -45,6 +60,7 @@
             align-items: center
 
             gap: 24px
+            margin: 32px 0 0 30px
 
             button  
                 border: none
@@ -66,5 +82,103 @@
                 font-weight: 400
                 font-size: 12px
                 line-height: 150%
+                width: 120px
                 color: #0b367d
 
+@media screen and ( max-width:  1100px)
+    .container
+        width: 920px
+
+        .bigBlock
+            background-image: url('../../backgrounds/glass_2.svg')
+
+            background-position: 380px 10px
+            background-size: 550px
+    
+@media screen and ( max-width: 960px )
+    .container
+        width: 728px
+        
+        .bigBlock
+            height: 370px
+            background-position: 330px 10px
+            background-size: 400px
+            background-image: url('../../backgrounds/glass_3.svg')
+
+            .title
+                font-size: 60px
+
+            .par
+                width: 470px
+                font-size: 24px
+
+            .buttons
+                button
+                    width: 282px
+                    height: 60px
+
+
+@media screen and ( max-width:  768px)
+    .container
+        width: 440px
+
+        .bigBlock
+            height: 550px 
+
+            background-position: center bottom
+            background-image: url('../../backgrounds/glass_4.svg')
+
+            .title
+                font-size: 48px
+                margin: 15px 0 0 15px
+
+            .par
+                width: 400px
+                margin: 24px 0 0 15px
+                font-size: 20px
+
+            .buttons
+                flex-direction: column
+
+                justify-content: flex-start
+                align-items: flex-start
+                margin: 24px 0 0 15px
+                gap: 11px
+
+                
+
+                button, p
+                    width: 410px
+
+@media screen and ( max-width:  480px)
+    .container
+        width: 320px
+
+
+        .bigBlock
+            background-image: url('../../backgrounds/glass_5.svg')
+            height: 400px
+            background-size: 300px
+
+            .title
+                font-size: 36px
+                width: 290px
+            
+            .par
+                font-size: 16px
+                margin: 20px 0 0 15px
+
+                width: 290px
+
+            .buttons
+                width: 290px
+                button, p
+                    width: 290px
+
+
+
+    
+
+                
+
+    
