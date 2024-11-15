@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import s from './OrderPopup.module.sass';
 
+
 function OrderPopup({ onClose }) {
     const [isChecked, setIsChecked] = useState(false);  // Состояние для чекбокса
     const [name, setName] = useState('');  // Состояние для имени
@@ -8,7 +9,6 @@ function OrderPopup({ onClose }) {
     
     const [isSend, setIsSend] = useState(false)
 
-    const dsa = process.env.BACKEND_URL
     function scrollToTop() {
         window.scrollTo({
             top: 0,
@@ -30,8 +30,23 @@ function OrderPopup({ onClose }) {
             alert('Вы должны согласиться с условиями передачи данных.');
             return;
         }
-        // Логика отправки формы (например, вызов API или другой обработчик)
-        alert('Форма отправлена!');
+        
+        fetch(`${process.env.REACT_APP_URL}/new_request`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, phone }),
+          })
+          .then(res => res.json())
+          .then(data => {
+            console.log('Ответ от сервера:', data);
+            // Логика для обработки ответа
+          })
+          .catch(error => {
+            console.error('Ошибка:', error);
+            // Логика для обработки ошибок
+          });
         // После отправки формы можно очистить поля
         setName('');
         setPhone('');
@@ -41,8 +56,6 @@ function OrderPopup({ onClose }) {
     };
     
     useEffect(() => {
-        console.log(dsa);
-
         const form = localStorage.getItem('form')
         if(form == 'true'){
             setIsSend(true)
