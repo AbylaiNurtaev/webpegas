@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
 import s from './MobileHeader.module.sass'
+import OrderPopup from '../OrderPopup/OrderPopup'
 
 function MobileHeader() {
 
   const [menu, setMenu] = useState(false)
-
+  const [popup, setPopup] = useState(false)
   return (
     <>
+
+{
+        popup == true &&
+        <OrderPopup onClose={() => setPopup(false)}/>
+      }
     {
       menu == true &&
       <div className={s.menu}>
@@ -29,8 +35,8 @@ function MobileHeader() {
       <div className={s.container}>
           <img onClick={() => setMenu(true)} src="/icons/burger_menu.svg" alt="burger" className={s.burgerMenuBtn} />
           <img className={s.logo} src="/images/logo.svg" alt="logo" />
-          <button className={s.feedbackBtn}>Обратная связь</button>
-          <img className={s.phoneIcon} src="/icons/phone.svg" alt="phone" />
+          <button className={s.feedbackBtn} onClick={() => setPopup(true)}>Обратная связь</button>
+          <img className={s.phoneIcon} onClick={() => setPopup(true)} src="/icons/phone.svg" alt="phone" />
       </div>
     </>
   )

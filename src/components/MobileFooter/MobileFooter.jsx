@@ -19,9 +19,11 @@ function MobileFooter() {
             <div className={s.left}>
                 <div className={s.info}>
                     <p className={s.time}>Ежедневно с 9:00 до 20:00</p>
-                    <p className={s.phone}>8 (800) 000-00-00</p>
+                    <a className={s.phone} href='tel:+79522517323'>8 (952) 251-73-23</a>
                     <p className={s.email}><b>Электронная почта:</b><br/>
-                    info@sitename.ru</p>
+                    infowebpegas@gmail.com</p>
+                    <p className={s.email} style={{cursor: 'pointer'}} onClick={() => window.open("https://t.me/webpeegas")}><b>Telegram:</b><br/>
+                    t.me/webpeegas</p>
                 </div>
 
                 <button onClick={scrollToTop}>

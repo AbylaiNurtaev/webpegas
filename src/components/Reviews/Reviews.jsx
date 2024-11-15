@@ -122,7 +122,7 @@ function Reviews() {
       <div className={s.mobileButtons}>
           <img src="/icons/leftArrow.svg" onClick={moveToLeft} alt="Предыдущий" />
           <img src="/icons/rightArrow.svg" onClick={moveToRight} alt="Следующий" />
-        </div>
+      </div>
     </div>
     </>
   );
