@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import s from './Popup.module.sass'
+import OrderPopup from '../OrderPopup/OrderPopup';
 
 function Popup({ type, onClose }) {
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
   }, [])
+
+  const [popup, setPopup] = useState(false)
 
   let title = "";
   let description = "";
@@ -39,7 +42,20 @@ function Popup({ type, onClose }) {
       break;
   }
 
+  const showPopup = () => {
+    setPopup(true)
+  }
+
   return (
+    <>
+    {
+      popup &&
+    <div className={s.otherPopup}>
+      <OrderPopup onClose={() => onClose()}></OrderPopup>
+    </div>
+    }
+    {
+      !popup &&
     <div className={s.container}>
         <div className={s.overlay} onClick={onClose}></div>
         <div className={s.popup}>
@@ -53,11 +69,13 @@ function Popup({ type, onClose }) {
             <div className={s.left}>
                 <div className={s.title}>{title}</div>
                 <div className={s.par}>{description}</div>
-                <button>Заказать</button>
+                <button onClick={showPopup}>Заказать</button>
             </div>
             <img className={s.right} src={img} alt="" />
         </div>
     </div>
+    }
+    </>
   )
 }
 
