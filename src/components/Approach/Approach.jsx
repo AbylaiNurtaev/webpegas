@@ -1,11 +1,20 @@
 import React from 'react'
 import s from './Approach.module.sass'
+import { useEffect } from 'react';
 
 function Approach() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+        const element = document.querySelector(hash);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+    }
+}, []);
   return (
-    <div className={s.container}>
+    <div className={s.container} id="aboutus">
         <div className={s.titleMobile}>Преимущества и подход</div>
-        <div className={s.parMobile}>Мы работаем в сфере разработки сайтов и ботов уже более 5 лет. Наша команда состоит из опытных специалистов, которые любят свое дело и стремятся к совершенству.</div>
+
+        <div className={s.parMobile}  id="aboutus">Мы работаем в сфере разработки сайтов и ботов уже более 5 лет. Наша команда состоит из опытных специалистов, которые любят свое дело и стремятся к совершенству.</div>
       <div className={s.columns}>
         <div className={s.leftColumn}>
           <div className={s.titleText}>Преимущества и подход</div>

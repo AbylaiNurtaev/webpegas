@@ -1,0 +1,236 @@
+@import '../../fonts/fonts'
+    
+.container
+    display: flex
+    flex-direction: column
+
+    justify-content: center
+    align-items: center
+    .overlay
+        position: absolute
+        top: 0
+        left: 0
+
+        width: 100vw
+        height: 100vh
+
+        background-color: rgba(0, 0, 0, 0.5) // Полупрозрачный черный фон
+        z-index: 5
+        backdrop-filter: blur(8px)
+
+        position: fixed
+
+    .popup
+        z-index: 10
+        position: fixed
+
+        top: 50px
+
+        
+
+        width: 488px
+        height: 820px
+
+        border-radius: 20px
+
+        box-shadow: 0 29px 64px 0 rgba(0, 0, 0, 0.1), 0 117px 117px 0 rgba(0, 0, 0, 0.09), 0 262px 157px 0 rgba(0, 0, 0, 0.05), 0 466px 187px 0 rgba(0, 0, 0, 0.01), 0 729px 204px 0 rgba(0, 0, 0, 0)
+        background: #edf0f7
+
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+        .mobileCitation
+            display: none
+
+        .right
+            width: 328px
+
+        .logo
+            display: none
+
+        .closeBtn
+            position: absolute
+
+            top: 30px
+            right: 30px
+            cursor: pointer
+
+        .left
+            display: flex
+            flex-direction: column
+
+            justify-content: center
+            align-items: center
+
+        .title
+            font-family: "Roboto", sans-serif
+            font-weight: 600
+            font-size: 18px
+            line-height: 170%
+            text-align: center
+            color: #11263a
+        .work
+            font-family: "Roboto", sans-serif
+            font-weight: 400
+            font-size: 13px
+            line-height: 170%
+            text-align: center
+            color: #11263a
+            width: 163px
+
+        .citationWrapper
+            width: 326px
+            display: flex
+            flex-direction: column
+
+            justify-content: flex-start
+            align-items: flex-start
+
+            margin-top: 36px
+
+        .par
+            font-family: "Roboto", sans-serif
+            font-weight: 400
+            font-size: 14px
+            line-height: 170%
+            color: #11263a
+
+            width: 326px
+            margin-top: 24px
+
+        button  
+            border: none
+
+            border-radius: 10px
+                
+            width: 432px
+            height: 65px
+            background: #1760d7
+
+            font-family: "Roboto", sans-serif
+            font-weight: 700
+            font-size: 24px
+            line-height: 100%
+            letter-spacing: -0.01em
+            color: #fff
+            transition: .3s
+
+            margin-top: 69px
+
+            &:hover
+                box-shadow: 0 6px 25px 0 rgba(23, 96, 215, 0.5)
+                background: #1760d7
+                transition: .3s
+
+            &:active
+                background: #0e4bad
+
+
+@media screen and ( max-width:  768px)
+    .container
+        .popup
+            width: 440px
+            height: 412px
+            top: 50px
+
+            flex-direction: column
+
+            align-items: center
+            justify-content: center
+            padding: 15px 0
+
+        
+
+            .top
+                display: flex
+                flex-direction: row
+
+                justify-content: flex-start
+                align-items: flex-end
+
+                width: 300px
+                gap: 32px
+                // background: red
+                
+
+            .left
+
+                
+                .citationWrapper, .par
+                    display: none
+
+                justify-content: flex-start
+                align-items: flex-start
+                
+                .work
+                    text-align: left
+            .right
+                width: 76px
+                
+
+            .mobileCitation
+                display: flex
+                flex-direction: column
+
+                justify-content: flex-start
+                align-items: flex-start
+
+                .mobileBtn
+                    display: none
+
+@media screen and ( max-width:  480px)
+    .container
+        
+        .popup
+            height: 100vh
+            top: 0
+            width: 100%
+            border-radius: 0
+
+            justify-content: flex-start
+
+            .top
+                margin-top: 100px
+
+            .left
+                margin-top: 20px
+
+            button
+                position: absolute
+                bottom: 50px
+
+            .logo
+                display: flex
+                position: absolute
+                left: 20px
+                top: 20px
+
+            .closeBtn
+                right: 20px 
+                top: 20px
+                
+            .mobileCitation
+                .mobileBtn
+                    display: flex
+                    flex-direction: column
+
+                    justify-content: center
+                    align-items: center
+                    width: 320px
+                    height: 64px
+                    border-radius: 10px
+                    background: #1760d7
+                    color: white
+
+                    border: none
+                    position: absolute
+                    bottom: 55px
+
+                    font-family: "Roboto", sans-serif
+                    font-weight: 700
+                    font-size: 16px
+                    line-height: 150%
+                    color: #fff

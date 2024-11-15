@@ -1,0 +1,184 @@
+@import '../../fonts/fonts'
+    
+.container
+    display: flex
+    flex-direction: column
+
+    justify-content: center
+    align-items: center
+
+    width: 100vw
+    padding-top: 120px
+
+    .mobileButtons
+        display: none
+
+
+    .top
+        display: flex
+        flex-direction: row
+
+        justify-content: space-between
+        align-items: flex-end
+
+        width: 1060px
+
+        .title
+            font-family: $title-font
+            font-size: 80px
+
+            color: #0b367d
+
+        .buttons
+            display: flex
+            flex-direction: row
+
+            justify-content: center
+            align-items: center
+
+            gap: 24px
+
+            img
+                cursor: pointer
+
+    .peoplesWrapper
+        width: 1060px
+        height: 400px
+        
+        z-index: -2000
+        
+
+    .light
+        width: 430px
+        height: 410px
+        background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%)
+        position: absolute
+        right: 0
+        z-index: 3
+    .peoples
+        position: absolute
+        right: 0
+        margin-top: 350px
+        z-index: 0
+        display: flex
+        width: 1360px
+        height: 500px
+        overflow: hidden
+    
+        // margin-top: 60px
+        cursor: pointer
+        
+        
+        .block
+            position: absolute
+
+            top: 0
+            left: 0
+            width: 328px
+            height: 314px
+
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+
+            transition: transform 0.5s ease-in-out
+            cursor: pointer
+            margin-left: 20px
+            cursor: pointer
+
+            &:first-child
+                margin-left: 0
+
+        
+                
+
+            .person
+                display: flex
+                flex-direction: row
+
+                justify-content: flex-start
+                align-items: flex-start
+
+                gap: 16px
+
+                img
+                    width: 90px
+                    height: 90px
+                    object-fit: cover
+
+                .text
+                    .name
+                        font-family: "Roboto", sans-serif
+                        font-weight: 700
+                        font-size: 14px
+                        line-height: 150%
+                        color: #0b367d
+                        margin: 0
+                        padding: 0
+
+                    p
+                        font-family: "Roboto", sans-serif
+                        font-weight: 500
+                        font-size: 14px
+                        line-height: 150%
+                        color: #a6aeb6
+                        margin-top: 3px
+                        width: 80%
+
+                    img
+                        width: 126px
+                        height: 22px
+                        margin-top: 10px
+            .par
+                font-family: "Roboto", sans-serif
+                font-weight: 400
+                font-size: 16px
+                line-height: 150%
+                color: #0b367d
+                width: 310px
+            
+                margin: 16px 0 0 0
+
+        &.active
+            transform: translateX(0%)
+
+@media screen and ( max-width:  1350px)
+    .container
+        .top
+            width: 95%
+        .peoples
+            width: 95%
+
+        .peoplesWrapper
+            width: 95%
+
+        .light
+            display: none
+    
+@media screen and ( max-width:  960px)
+    .container
+        .top
+            justify-content: space-between
+            align-items: center
+
+            .title
+                font-size: 60px
+
+        .peoples
+            margin-top: 200px
+            
+@media screen and ( max-width:  768px)
+    .container
+        .mobileButtons
+            display: flex
+            width: 90%
+            gap: 20px
+            z-index: 5
+        
+        .peoplesWrapper
+            height: 380px
+
+        .top
+            .buttons
+                display: none

@@ -1,0 +1,150 @@
+@import '../../fonts/fonts'
+    
+.container
+    display: flex
+    flex-direction: column
+
+    justify-content: center
+    align-items: center
+
+    width: 1060px
+    padding-top: 120px
+
+    .top
+        display: flex
+        flex-direction: row
+
+        justify-content: space-between
+        align-items: center
+
+        border-bottom: 1px solid #bababa
+        padding-bottom: 30px
+
+        width: 100%
+
+        .titleSide
+            font-family: $title-font
+            font-weight: 400
+            font-size: 80px
+            line-height: 80%
+            text-transform: uppercase
+            color: #0b367d
+        
+
+    .blocks
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+        width: 100%
+
+        .block
+            display: flex
+            flex-direction: row
+
+            justify-content: space-between
+            align-items: flex-start
+
+            padding: 40px 0
+            width: 100%
+            border-bottom: 1px solid #bababa
+            
+
+            .title
+                font-family: $title-font
+                font-weight: 400
+                font-size: 47px
+                line-height: 106%
+                color: #0b367d
+                width: 350px
+
+            .par
+                font-family: "Roboto", sans-serif
+                font-weight: 400
+                font-size: 16px
+                line-height: 150%
+                color: #0b367d
+                width: 520px
+
+@media screen and ( max-width:  1100px)
+    .container
+        width: 920px
+        .top
+            .titleSide
+                white-space: nowrap
+            
+            img
+                width: 450px
+
+@media screen and ( max-width:  960px)
+    .container
+        width: 730px
+        padding-top: 80px
+
+        .top
+            .titleSide
+                font-size: 60px
+            
+            img
+                width: 350px
+
+        .blocks
+            .block
+                padding: 32px 0
+
+                .title
+                    font-size: 42px
+                    width: 293px
+
+                .par
+                    width: 355px
+
+@media screen and ( max-width:  768px)
+    .container
+        width: 438px
+        padding-top: 64px
+
+        .top
+            img
+                display: none
+            
+        
+        .blocks
+            .block
+                flex-direction: column
+
+                justify-content: flex-start
+                align-items: flex-start
+
+                gap: 32px
+
+                .title
+                    width: 100%
+
+                .par
+                    width: 100%
+
+@media screen and ( max-width:  480px)
+    .container
+        width: 320px
+        padding-top: 48px
+
+        .top
+            .titleSide
+                width: 100%
+                text-align: center
+                font-size: 36px
+
+        .blocks
+            .block
+                .title
+                    font-size: 32px
+                
+                
+    
+    
+
+
+    

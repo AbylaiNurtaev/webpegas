@@ -1,0 +1,266 @@
+@import '../../fonts/fonts'
+    
+.container
+    display: flex
+    flex-direction: row
+
+    justify-content: space-between
+    align-items: center
+
+    padding: 30px
+
+    width: 1000px
+    height: 365px
+
+    background: #dde6f5
+    border-radius: 20px
+
+    margin-top: 120px
+
+    .asd
+        
+
+    .left
+        display: flex
+        flex-direction: column
+
+        justify-content: space-between
+        align-items: flex-start
+        height: 100%
+
+        .title
+            font-family: $title-font
+            font-weight: 400
+            font-size: 80px
+            line-height: 87%
+            text-transform: uppercase
+            color: #0b367d
+
+            width: 410px
+
+        button
+            border: 1px solid #0b367d
+            border-radius: 10px
+            
+            width: 180px
+            height: 32px
+
+            font-family: "Roboto", sans-serif
+            font-weight: 700
+            font-size: 12px
+            line-height: 133%
+            color: #0b367d
+
+            background: none
+
+    .right
+        width: 490px
+
+        display: flex
+        flex-direction: column
+
+        justify-content: flex-start
+        align-items: flex-start
+
+        .title
+            font-family: "Roboto", sans-serif
+            font-weight: 500
+            font-size: 24px
+            line-height: 133%
+            color: #0b367d
+            width: 450px
+
+        .par
+            font-family: "Roboto", sans-serif
+            font-weight: 400
+            font-size: 16px
+            line-height: 150%
+            color: #0b367d
+            margin-top: 16px
+
+
+        input
+            border-radius: 10px
+            padding: 14px 20px 14px 52px
+            width: 412px
+            height: 36px
+
+            background: #cad5e9
+            border: none
+
+            font-family: "Roboto", sans-serif
+            font-weight: 400
+            font-size: 16px
+            line-height: 150%
+            letter-spacing: 0.05em
+            color: #6e7191
+            margin-top: 16px
+
+            background-image: url('../../backgrounds/Profile.svg')
+            background-repeat: no-repeat
+            background-position: left center
+            background-position-x: 20px
+            // transition: .3s
+
+            &:nth-of-type(2)
+                background-image: url('../../backgrounds/Calling.svg')
+
+            &:hover
+                border: 1px solid rgba(11, 54, 125, 0.6)
+                // transition: .3s
+            &:active
+                border: 1px solid #0b367d
+
+            
+
+
+
+        button
+            border-radius: 10px
+
+            width: 490px
+            height: 48px
+
+            background: #1760d7
+            color: white
+
+            font-family: "Roboto", sans-serif
+            font-weight: 700
+            font-size: 16px
+            line-height: 150%
+
+            border: none
+            letter-spacing: -0.01em
+            color: #fff
+            margin-top: 16px
+
+        .checkbox
+            display: flex
+            flex-direction: row
+
+            justify-content: center
+            align-items: center
+
+            gap: 5px
+            margin-top: 16px
+
+            input
+                width: 12px
+                height: 12px
+
+                margin: 0
+                cursor: pointer
+
+            p
+                font-family: "Roboto", sans-serif
+                font-weight: 400
+                font-size: 14px
+                
+                color: #7e868e
+
+                u
+                    cursor: pointer
+
+@media screen and ( max-width:  1100px)
+    .container
+        width: 860px
+
+        .right
+            width: 420px
+
+            input
+                width: 342px
+
+            button
+                width: 420px
+
+@media screen and ( max-width:  960px)
+    .container
+        width: 666px
+        height: 449px
+
+        .left
+            .title
+                width: 270px
+
+
+        .right
+            width: 325px
+
+            .title
+                width: 100%
+
+            input
+                width: 246px
+
+            button
+                width: 324px
+    
+@media screen and ( max-width:  768px)
+    .container
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+        height: 573px
+        width: 410px
+
+        padding: 15px
+        margin-top: 64px
+
+        .left
+            gap: 0px
+            align-items: flex-start
+            justify-content: center
+            height: auto
+            .title
+                order: 1
+                width: 100%
+                font-size: 70px
+                margin-top: 17px
+
+            button
+                order: 0
+
+        .right
+            width: 100%
+
+            .par
+                font-size: 16px
+
+            input
+                width: 332px
+
+            button
+                width: 100%
+
+
+@media screen and ( max-width:  480px)
+    .container
+        margin-top: 48px
+        width: 290px
+
+        .left
+            .title
+                font-size: 50px
+
+            button
+                white-space: nowrap
+        
+        .right
+            .title
+                font-size: 24px
+
+            .par
+                font-size: 16px
+
+            input
+                width: 212px
+
+                &::placeholder
+                    content: "dasd" 
+
+            .checkbox
+                gap: 0px
+                

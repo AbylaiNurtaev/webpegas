@@ -1,7 +1,7 @@
 @import '../../fonts/fonts.sass'
     
 .container
-    margin-top: 120px
+    padding-top: 120px
 
     display: flex
     flex-direction: column
@@ -66,6 +66,7 @@
 
             border-radius: 20px
             cursor: pointer
+            transition: .3s
             
 
             &:nth-of-type(2)
@@ -84,6 +85,17 @@
                 width: 380px
                 height: 350px
                 
+            &:hover
+                background: #0b367d
+                transition: .3s
+
+                .title
+                    color: white
+
+                img
+                    color: white
+                    // background: white
+
 
             .title
                 font-family: $title-font
@@ -103,7 +115,7 @@
             width: 340px
             height: 350px
 
-            background: linear-gradient(43deg, #0b367d 0%, #1a4ea3 100%), linear-gradient(44deg, #0b367d 0%, #1a4ea3 100%)
+            background: linear-gradient(44deg, #0b367d 0%, #1a4ea3 100%)
 
             display: flex
 
@@ -114,6 +126,11 @@
 
             gap: 19px
             order: 5
+
+            &:hover
+                background: linear-gradient(44deg, #0b367d 0%, #1a4ea3 100%), #0b367d
+
+            
 
 
             .text
@@ -267,8 +284,17 @@
                 width: 100% !important
                 height: 220px !important
 
+                &:hover
+                    background: #dde6f5
+
+                    .title
+
+                        color: #0b367d
+
                 .title
                     width: 100% !important
+
+                
 
                 
             .lastBlock

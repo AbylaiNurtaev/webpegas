@@ -1,0 +1,176 @@
+@import '../../fonts/fonts'
+    
+.container
+    display: flex
+    flex-direction: column
+
+    justify-content: center
+    align-items: center
+    .overlay
+        position: absolute
+        top: 0
+        left: 0
+
+        width: 100vw
+        height: 100vh
+
+        background-color: rgba(0, 0, 0, 0.5) // Полупрозрачный черный фон
+        z-index: 100
+        backdrop-filter: blur(8px)
+
+        position: fixed
+
+    .popup
+        z-index: 10
+        position: fixed
+
+        top: 250px
+
+        
+
+        width: 870px
+        height: 470px
+
+        border-radius: 20px
+
+        box-shadow: 0 29px 64px 0 rgba(0, 0, 0, 0.1), 0 117px 117px 0 rgba(0, 0, 0, 0.09), 0 262px 157px 0 rgba(0, 0, 0, 0.05), 0 466px 187px 0 rgba(0, 0, 0, 0.01), 0 729px 204px 0 rgba(0, 0, 0, 0)
+        background: #edf0f7
+
+        display: flex
+        flex-direction: row
+
+        justify-content: center
+        align-items: center
+        z-index: 100
+
+        .logo
+            display: none
+
+        .closeBtn
+            position: absolute
+
+            top: 30px
+            right: 30px
+            cursor: pointer
+
+        .title
+            font-family: $title-font
+            font-weight: 400
+            font-size: 64px
+            line-height: 100%
+            color: #103d89
+            margin: 4px 0 0 00px
+            width: 400px
+
+        .par
+            font-family: "Roboto", sans-serif
+            font-weight: 400
+            font-size: 16px
+            line-height: 150%
+            color: #103d89
+            margin: 20px 0 0 00px
+            width: 430px
+
+        button  
+            border: none
+
+            border-radius: 10px
+                
+            width: 432px
+            height: 65px
+            background: #1760d7
+
+            font-family: "Roboto", sans-serif
+            font-weight: 700
+            font-size: 24px
+            line-height: 100%
+            letter-spacing: -0.01em
+            color: #fff
+            transition: .3s
+
+            margin-top: 69px
+
+            &:hover
+                box-shadow: 0 6px 25px 0 rgba(23, 96, 215, 0.5)
+                background: #1760d7
+                transition: .3s
+
+            &:active
+                background: #0e4bad
+
+@media screen and ( max-width:  960px)
+    .container
+        .popup
+            width: 640px
+            height: 300px
+
+            .left
+                width: auto
+            .title
+                font-size: 36px
+                width: 305px
+
+            .par
+                font-size: 16px
+                width: 318px
+
+            button
+                width: 320px
+                margin-top: 30px
+            
+            .right
+                width: 230px
+
+@media screen and ( max-width:  768px)
+    .container
+        .popup
+            width: 360px
+            height: 522px
+            top: 50px
+
+            flex-direction: column
+
+            align-items: flex-start
+            justify-content: space-between
+            padding: 15px 0
+
+            .logo
+                display: flex
+                position: absolute
+
+                left: 20px
+                top: 20px
+
+            .closeBtn
+                right: 20px
+                top: 20px
+
+            .right
+                order: 0
+                width: 180px
+                margin-top: 60px
+                margin-left: 20px
+
+                
+
+            .left
+                order: 1
+                margin-left: 20px
+
+@media screen and ( max-width:  480px)
+    .container
+        .popup
+            height: 100vh
+            top: 0
+            width: 100%
+            border-radius: 0
+
+            justify-content: flex-start
+
+            .left
+                margin-top: 20px
+
+            button
+                position: absolute
+                bottom: 140px
+    

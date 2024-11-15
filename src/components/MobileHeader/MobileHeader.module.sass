@@ -33,6 +33,58 @@
     .phoneIcon 
         display: none
 
+.menu
+    display: flex
+    flex-direction: column
+
+    justify-content: flex-start
+    align-items: center
+
+    width: 100vw
+    height: 100vh
+    top: 0
+
+    position: fixed
+
+    z-index: 10
+    background: #dde6f5
+
+    .logo
+        position: absolute
+        top: 20px
+        left: 20px
+
+    .closeBtn
+        position: absolute
+        top: 20px
+        right: 20px
+        
+
+    .navbar
+
+        display: flex
+        flex-direction: column
+        
+        justify-content: flex-start
+        align-items: center
+
+        gap: 22px
+        margin-top: 150px
+
+        width: 100%
+        
+
+
+        a
+            text-decoration: none
+            color: #0B367D
+
+            font-weight: 700
+            font-family: "Roboto", sans-serif
+            font-size: 30px
+
+    
+
 @media screen and ( max-width:  768px)
     .container
         .phoneIcon
