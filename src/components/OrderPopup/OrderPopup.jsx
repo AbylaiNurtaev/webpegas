@@ -89,10 +89,11 @@ function OrderPopup({ onClose }) {
                         />
                         <input
                             type="text"
-                            placeholder="Ваш номер телефона"
+                            placeholder="Номер телефона или Telegram"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
                         />
+                        {/* <p className={s.selectSoc}>либо можете оставить свой Telegram</p> */}
                         <button type="submit" disabled={!isChecked}>Отправить</button>
                     </form>
 

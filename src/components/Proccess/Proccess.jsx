@@ -27,15 +27,15 @@ function Proccess() {
   return (
     <div className={s.container} id='workParts'>
       <div className={s.top}>
-        <div className={s.titleSide}>Процесс работы</div>
+        <h1 className={s.titleSide}>Процесс работы</h1>
         <img src="/icons/proccessLine.svg" alt="" />
       </div>
         <div className={s.blocks}>
             {
                 blocks.map((elem, idx) => 
                     <div className={s.block} key={idx}>
-                        <div className={s.title}>{elem.title}</div>
-                        <div className={s.par}>{elem.par}</div>
+                        <h2 className={s.title}>{elem.title}</h2>
+                        <p className={s.par}>{elem.par}</p>
                     </div>
                 )
             }

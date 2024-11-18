@@ -18,7 +18,7 @@ function Advantages() {
       {showPopup !== null && <OrderPopup onClose={handleClosePopup}></OrderPopup>}
       <div className={s.container}>
           <div className={s.bigBlock}>
-              <div className={s.title}><p>Полёт вашего бизнеса<br></br>начинается здесь!</p></div>
+              <h1 className={s.title}>Полёт вашего бизнеса<br></br>начинается здесь!</h1>
 
               <div className={s.par}>Веб-студия "Веб Пегас" создаёт сайты, боты и другие цифровые решения, которые делают вам эффективность.</div>
               <div className={s.buttons}>

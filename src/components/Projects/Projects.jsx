@@ -39,7 +39,7 @@ function Projects() {
                 projects.map((elem, index) => 
                     <div className={s.project} key={index}>
                         <img src={elem.img} alt="img" />
-                        <div className={s.title}>{elem.title}</div>
+                        <h2 className={s.title}>{elem.title}</h2>
                     </div>
                 )
             }

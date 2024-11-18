@@ -23,13 +23,13 @@ function MobileHeader() {
               alt="Закрыть"
               onClick={() => setMenu(false)}
           />
-          <div className={s.navbar}>
+          <nav className={s.navbar}>
                 <a href="#aboutus" onClick={() => setMenu(false)}>О нас</a>
                 <a href="#services" onClick={() => setMenu(false)}>Услуги</a>
                 <a href="#portfolio" onClick={() => setMenu(false)}>Портфолио</a>
                 <a href="#feedbacks" onClick={() => setMenu(false)}>Отзывы</a>
                 <a href="#workParts" onClick={() => setMenu(false)}>Этапы работы</a>
-          </div>
+          </nav>
       </div>
     }
       <div className={s.container}>

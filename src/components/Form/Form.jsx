@@ -74,7 +74,7 @@ function Form() {
           />
           <input
             type="text"
-            placeholder={isMobile ? 'Телефон' : 'Введите ваш номер телефона'}
+            placeholder={isMobile ? 'Телефон или Telegram' : 'Ваш номер телефона или Telegram'}
             onChange={(e) => setPhone(e.target.value)}
           />
 

@@ -54,12 +54,12 @@ function Services() {
             {showPopup !== null && <Popup type={showPopup} onClose={handleClosePopup} />}
             
             <div className={s.container} id='services'>
-                <div className={s.titleMob}>Широкий спектр услуг</div>
+                <h1 className={s.titleMob}>Широкий спектр услуг</h1>
                 <div className={s.parMob}>Мы поможем вам воспользоваться всей силой этих инструментов для достижения ваших целей.</div>
                 <div className={s.blocks}>
                     <div className={s.firstBlock}>
-                        <div className={s.title}>Широкий спектр услуг</div>
-                        <div className={s.par}>Мы поможем вам воспользоваться всей силой этих инструментов для достижения ваших целей.</div>
+                        <h1 className={s.title}>Широкий спектр услуг</h1>
+                        <p className={s.par}>Мы поможем вам воспользоваться всей силой этих инструментов для достижения ваших целей.</p>
                     </div>
                     
                     {blocks.map((block, idx) => (

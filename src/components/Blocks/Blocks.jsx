@@ -31,8 +31,8 @@ function Blocks() {
         {
             blocksInfo.map((block, idx) => 
             <div className={s.block} key={idx}>
-                <div className={s.title} dangerouslySetInnerHTML={ {__html: block.title}}></div>
-                <div className={s.par}>{block.par}</div>
+                <h1 className={s.title} dangerouslySetInnerHTML={ {__html: block.title}}></h1>
+                <p className={s.par}>{block.par}</p>
             </div>
             )
         }
