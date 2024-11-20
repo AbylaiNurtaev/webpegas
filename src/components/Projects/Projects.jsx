@@ -1,7 +1,9 @@
 import React from 'react'
 import s from './Projects.module.sass'
+import { useNavigate } from 'react-router-dom'
 
 function Projects() {
+    const navigate = useNavigate()
 
     const projects = [
         {
@@ -37,7 +39,7 @@ function Projects() {
         <div className={s.projects}>
             {
                 projects.map((elem, index) => 
-                    <div className={s.project} key={index}>
+                    <div className={s.project} key={index} onClick={() => navigate(`/portfolio/${elem.title}`)}>
                         <img src={elem.img} alt="img" />
                         <h2 className={s.title}>{elem.title}</h2>
                     </div>
