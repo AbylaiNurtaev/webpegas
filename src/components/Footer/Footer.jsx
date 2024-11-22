@@ -17,11 +17,11 @@ function Footer() {
                 <img src="/images/white_logo.svg" style={{cursor: 'pointer'}} onClick={scrollToTop} alt="" />
                 <div className={s.right}>
                     <div className={s.nav}>
-                        <a href="#aboutus">О нас</a>
-                        <a href="#services">Услуги</a>
-                        <a href="#portfolio">Портфолио</a>
-                        <a href="#feedbacks">Отзывы</a>
-                        <a href="#workParts">Этапы работы</a>
+                        <a href="/#aboutus">О нас</a>
+                        <a href="/#services">Услуги</a>
+                        <a href="/#portfolio">Портфолио</a>
+                        <a href="/#feedbacks">Отзывы</a>
+                        <a href="/#workParts">Этапы работы</a>
                     </div>
                     <div className={s.info}>
                         <p className={s.time}>Ежедневно с 9:00 до 20:00</p>
