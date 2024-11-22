@@ -11,7 +11,7 @@ function Projects() {
             img: "/images/projects/1.png"
         },
         {
-            title: "Курс по криптовалюте",
+            title: "Редизайн курсов для консалтинговой фирмы",
             img: "/images/projects/2.png"
         },
         {
@@ -19,15 +19,15 @@ function Projects() {
             img: "/images/projects/3.png"
         },
         {
-            title: "Страница курсов",
+            title: "сайт для сервиса по ПОДБОРУ стоматологов",
             img: "/images/projects/4.png"
         },
         {
-            title: "Лендинг для сервиса по выбору стоматологов",
+            title: "Лендинг для банкетного зала",
             img: "/images/projects/5.png"
         },
         {
-            title: "Многостраничник  для испытательной лаборатории",
+            title: "Многостраничник для испытательной лаборатории",
             img: "/images/projects/6.png"
         },
     ]
