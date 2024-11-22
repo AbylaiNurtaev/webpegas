@@ -24,11 +24,11 @@ function MobileHeader() {
               onClick={() => setMenu(false)}
           />
           <nav className={s.navbar}>
-                <a href="#aboutus" onClick={() => setMenu(false)}>О нас</a>
-                <a href="#services" onClick={() => setMenu(false)}>Услуги</a>
-                <a href="#portfolio" onClick={() => setMenu(false)}>Портфолио</a>
-                <a href="#feedbacks" onClick={() => setMenu(false)}>Отзывы</a>
-                <a href="#workParts" onClick={() => setMenu(false)}>Этапы работы</a>
+                <a href="/#aboutus" onClick={() => setMenu(false)}>О нас</a>
+                <a href="/#services" onClick={() => setMenu(false)}>Услуги</a>
+                <a href="/portfolio" onClick={() => setMenu(false)}>Портфолио</a>
+                <a href="/#feedbacks" onClick={() => setMenu(false)}>Отзывы</a>
+                <a href="/#workParts" onClick={() => setMenu(false)}>Этапы работы</a>
           </nav>
       </div>
     }

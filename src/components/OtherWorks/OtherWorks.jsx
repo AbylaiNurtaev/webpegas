@@ -1,37 +1,47 @@
 import React, { useEffect, useState } from 'react';
 import s from './OtherWorks.module.sass'
+import { useNavigate } from 'react-router-dom';
 
 function OtherWorks() {
 
     const Feedback = [
-        {
-            title: "инвестиции в строительство",
-            img: "/images/projects/1.png"
-        },
-        {
-            title: "Курс по криптовалюте",
-            img: "/images/projects/2.png"
-        },
-        {
-            title: "Многостраничник для студии 3д печати",
-            img: "/images/projects/3.png"
-        },
-        {
-            title: "Страница курсов",
-            img: "/images/projects/4.png"
-        },
-        {
-            title: "Лендинг для сервиса по выбору стоматологов",
-            img: "/images/projects/5.png"
-        },
-        {
-            title: "Многостраничник  для испытательной лаборатории",
-            img: "/images/projects/6.png"
-        },
+      {
+        title: "Многостраничник для студии 3д печати",
+        img: "/images/projects/3.png"
+    },
+    {
+        title: "Редизайн многостраничного сайта консалтинговой компании",
+        img: "/images/projects/2.png"
+    },
+    {
+        title: "инвестиции в строительство",
+        img: "/images/projects/1.png"
+    },
+    {
+        title: "Редизайн курсов для консалтинговой фирмы",
+        img: "/images/projects/4.png"
+    },
+    {
+        title: "сайт для сервиса по ПОДБОРУ стоматологов",
+        img: "/images/projects/5.png"
+    },
+    {
+        title: "Редизайн страницы курсов для консалтинговой фирмы",
+        img: "/images/projects/6.png"
+    },
+    {
+        title: "Лендинг для банкетного зала",
+        img: "/images/projects/7.png"
+    },
+    {
+        title: "Многостраничник для испытательной лаборатории",
+        img: "/images/projects/8.png"
+    },
     ]
 
     const [isMobile, setIsMobile] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const navigate = useNavigate()
   
     // Определяем, является ли устройство мобильным
     useEffect(() => {
@@ -52,7 +62,7 @@ function OtherWorks() {
         img: '/images/projects/1.png'
       },
       {
-        name: "Курс по криптовалюте",
+        name: "Редизайн курсов для консалтинговой фирмы",
         work: `директор туристического агентства "Путешествие"`,
         par: '"Мы искали компанию, которая сможет создать для нас сайт с онлайн-бронированием туров. Предложили отличное решение, которое полностью удовлетворило наши запросы. Сайт работает быстро, удобно и привлекательно. Спасибо за отличную работу!',
         img: '/images/projects/2.png'
@@ -64,19 +74,19 @@ function OtherWorks() {
         img: '/images/projects/3.png'
       },
       {
-        name: "Страница курсов",
+        name: "сайт для сервиса по ПОДБОРУ стоматологов",
         work: `руководитель цветочного ателье "Розовые мечты"`,
         par: 'Мы очень довольны вашей работой! Наш новый сайт выглядит прекрасно и привлекает внимание клиентов. Спасибо за креативный подход и отличное исполнение. Теперь у нас больше заказов и довольных клиентов.',
         img: '/images/projects/4.png'
       },
       {
-        name: "Лендинг для сервиса по выбору стоматологов",
+        name: "Лендинг для банкетного зала",
         work: `руководитель дизайн-студии "Креатив"`,
         par: 'Ваша команда сделала отличную работу с нашим новым сайтом! Дизайн выглядит современно и стильно, а функционал сайта полностью соответствует нашим ожиданиям. Спасибо за профессионализм и творческий подход!',
         img: '/images/projects/5.png'
       },
       {
-        name: "Многостраничник  для испытательной лаборатории",
+        name: "Многостраничник для испытательной лаборатории",
         work: `руководитель дизайн-студии "Креатив"`,
         par: 'Ваша команда сделала отличную работу с нашим новым сайтом! Дизайн выглядит современно и стильно, а функционал сайта полностью соответствует нашим ожиданиям. Спасибо за профессионализм и творческий подход!',
         img: '/images/projects/6.png'
@@ -89,7 +99,7 @@ function OtherWorks() {
       if (isMobile) {
         nextIndex = (currentIndex + 1) % peoples.length; // Переход к следующему элементу на мобильных устройствах (бесконечно)
       } else {
-        const maxIndex = 2; // Ограничиваем на десктопе прокрутку максимум до 2
+        const maxIndex = 4; // Ограничиваем на десктопе прокрутку максимум до 2
         nextIndex = currentIndex + 1 <= maxIndex ? currentIndex + 1 : currentIndex;
       }
       setCurrentIndex(nextIndex);
@@ -126,18 +136,15 @@ function OtherWorks() {
         </div>
         <div className={s.peoplesWrapper}></div>
         <div className={s.light}></div>
-        <div className={s.peoples}           onClick={() => {
+        <div className={s.peoples} onClick={() => {
               console.log('Clicked:');
               
             }}>
           {peoples.map((elem, index) => (
             <div
-            onClick={() => {
-              console.log('Clicked:', elem.name);
-              setShowPopup(elem);
-            }}
+              onClick={() => {navigate(`/portfolio/${elem.name}`); window.scrollTo(0, 0)}}
               key={index}
-              className={`${s.block} ${index === currentIndex ? s.active : ''}`}
+              className={`${s.block}`}
               style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
             >
               <div className={s.person} onClick={() => {console.log('dsadas')}}>

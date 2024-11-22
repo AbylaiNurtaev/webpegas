@@ -15,3 +15,59 @@
 
         margin-top: 64px
         color: #0B367D
+        width: 1060px
+        text-align: left
+
+    .images
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        gap: 40px
+        margin-top: 40px
+
+        img
+            width: 1060px
+
+@media screen and ( max-width:  1100px)
+    .container
+        .title, .images img
+            width: 920px
+    
+@media screen and ( max-width:  960px)
+    .container
+        .title, .images img
+            width: 728px
+
+        .title
+            font-size: 60px
+
+
+@media screen and ( max-width:  768px)
+    .container
+        .title, .images img
+            width: 440px   
+
+        .title
+            font-size: 56px
+            margin-top: 40px
+
+        .images
+            gap: 24px
+            margin-top: 20px
+
+@media screen and ( max-width:  480px)
+    .container
+        .title, .images img
+            width: 320px
+
+        .title
+            font-size: 36px
+            margin-top: 32px
+
+        .images
+            margin-top: 24px
+            gap: 20px
+    
+    
